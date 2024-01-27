@@ -3,7 +3,8 @@ defmodule OpenaiEx.Http do
 
   @doc false
   def headers(openai = %OpenaiEx{}) do
-    base = [{"Authorization", "Bearer #{openai.token}"}]
+    # base = [{"Authorization", "Bearer #{openai.token}"}]
+    base = [{"api-key", "#{openai.token}"}]
 
     org =
       if is_nil(openai.organization), do: [], else: [{"OpenAI-Organization", openai.organization}]

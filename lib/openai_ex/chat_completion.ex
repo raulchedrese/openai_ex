@@ -70,7 +70,7 @@ defmodule OpenaiEx.ChatCompletion do
     args |> Map.take(@api_fields)
   end
 
-  @ep_url "/chat/completions"
+  @ep_url "/chat/completions?api-version=2023-12-01-preview"
 
   @doc """
   Calls the chat completion 'create' endpoint.
